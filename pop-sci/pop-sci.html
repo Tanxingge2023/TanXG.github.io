@@ -158,18 +158,19 @@
             color: #93c5fd;
         }
         
-        /* 核心修改1：卡片网格 - 每行最多4个，固定列宽 */
-        .sub-card-grid {
-            display: grid;
-            /* 固定4列，每列220px，间距25px，超出自动换行 */
-            grid-template-columns: repeat(4, 250px);
-            gap: clamp(20px, 3vw, 75px);
-            margin-top: 20px;
-            padding: 20px 0;
-            /* 小屏幕下允许横向滚动，不挤压卡片 */
-            overflow-x: auto;
-            padding-bottom: 10px;
-        }
+
+    
+.sub-card-grid {
+    display: grid;
+    /* 固定一行4个，绝不改变 */
+    grid-template-columns: repeat(4, 250px);
+    /* 👇 只改这里：单独加大 行间距（上下两行卡片的距离） */
+    gap: 40px;
+    margin-top: 10px;
+    padding: 10px 0;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
         
         /* 核心修改2：卡片样式 - 固定尺寸，形状不变 */
         .sub-card {
