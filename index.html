@@ -1,46 +1,41 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- 正确配置jpg格式的favicon -->
     <link rel="icon" href="logo.jpg" type="image/jpeg">
-    <title>探星阁</title>
+    <title>TanXG (Tanxingge)</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-body {
-    font-family: "Microsoft YaHei", Arial, sans-serif;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0;
-    line-height: 1.7;
-    color: #e2e8f0;
-    /* 核心修改：你的背景图片，叠加深色遮罩保证文字清晰 */
-    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url("bg2.jpg");
-    /* 背景图片全屏适配 */
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    position: relative;
-    overflow-x: hidden;
-}
+        body {
+            font-family: "Microsoft YaHei", Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0;
+            line-height: 1.7;
+            color: #e2e8f0;
+            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url("bg2.jpg");
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
         .content-wrapper {
             padding: 0 20px 40px;
             max-width: 1200px;
             margin: 0 auto;
         }
-        /* 物理天文风格头部 */
         .header {
             text-align: center;
             margin: 40px 0;
             padding: 40px 30px;
-            /* 渐变调整为深空蓝+科技青 */
             background: linear-gradient(120deg, #0f172a, #1e293b);
             color: #ffffff;
             border-radius: 16px;
@@ -49,7 +44,6 @@ body {
             position: relative;
             overflow: hidden;
         }
-        /* 轨道装饰效果 */
         .header::before {
             content: '';
             position: absolute;
@@ -119,7 +113,6 @@ body {
             line-height: 1.8;
         }
 
-        /* 物理天文风格卡片布局 */
         .card-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -127,7 +120,6 @@ body {
             margin: 40px 0;
         }
         .card-item {
-            /* 深空卡片背景 */
             background: rgba(15, 23, 42, 0.6);
             border-radius: 16px;
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(66, 153, 225, 0.1);
@@ -140,13 +132,11 @@ body {
             position: relative;
             backdrop-filter: blur(8px);
         }
-        /* 卡片悬浮效果：物理引力感+光效 */
         .card-item:hover {
             transform: translateY(-8px) scale(1.02);
             box-shadow: 0 16px 32px rgba(7, 14, 26, 0.5), 0 0 0 1px rgba(66, 153, 225, 0.3);
             border-color: rgba(96, 165, 250, 0.4);
         }
-        /* 卡片光效边框 */
         .card-item::before {
             content: '';
             position: absolute;
@@ -157,9 +147,7 @@ body {
             border-radius: 16px;
             padding: 1px;
             background: linear-gradient(135deg, rgba(66, 153, 225, 0), rgba(96, 165, 250, 0.4), rgba(66, 153, 225, 0));
-            -webkit-mask: 
-                linear-gradient(#fff 0 0) content-box, 
-                linear-gradient(#fff 0 0);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
             -webkit-mask-composite: xor;
             mask-composite: exclude;
             opacity: 0;
@@ -214,7 +202,6 @@ body {
             line-height: 1.6;
         }
 
-        /* 响应式适配 */
         @media (max-width: 768px) {
             .header h1 {
                 font-size: 2rem;
@@ -242,108 +229,87 @@ body {
 <body>
     <div class="content-wrapper">
         <div class="header" id="home">
-            <h1>探星阁</h1>
-            <div class="header-subtitle">求真 向善</div>
+            <h1>TanXG (Tanxingge)</h1>
+            <div class="header-subtitle">Truth & Virtue</div>
         </div>
 
         <div class="content-section" id="about">
-            <h2>关于本网站</h2>
-            <p>本网站是探星阁官方网站，致力于分享学习资源，搭建知识桥梁。不论你是专业学生、学者，还是业余爱好者，在此都能找到自己的乐趣。点击下方卡片，开启你的探索之旅！</p>
+            <p>Welcome to Tanxingge! We're here to share learning resources and build bridges for knowledge. Whether you're a student, a scholar, or just a hobbyist, there's something for you here. Tap the cards below to start your exploration!</p>
         </div>
 
-        <!-- 核心：三个功能卡片 -->
         <div class="card-grid">
-            <!-- 卡片1：关于探星阁 -->
             <a href="about-txg.html" class="card-item">
-                <div class="card-img">     
-                    <!-- 替换成你的图片地址，建议尺寸：300x200 -->
+                <div class="card-img">
                     <img src="main1.jpg">
                 </div>
                 <div class="card-content">
-                    <div class="card-title">关于探星阁</div>
-                    <div class="card-desc">了解探星阁的发展历程、团队介绍及核心宗旨</div>
+                    <div class="card-title">About TanXG</div>
+                    <div class="card-desc">Learn about our history, team, and core values</div>
                 </div>
             </a>
 
-            <!-- 卡片2：学科讲义 -->
             <a href="lecturenotes/lecture-notes.html" class="card-item">
                 <div class="card-img">
-                    <!-- 替换成你的图片地址，建议尺寸：300x200 -->
                     <img src="main2.jpg">
                 </div>
                 <div class="card-content">
-                    <div class="card-title">学习资源（科学）</div>
-                    <div class="card-desc"> 获取讲义、课件等学习资源</div>
+                    <div class="card-title">Learning Resources (Science)</div>
+                    <div class="card-desc">Access lecture notes, slides, and study materials</div>
                 </div>
             </a>
 
-              <!-- 卡片3：科普资源 -->
             <a href="pop-sci/pop-sci.html" class="card-item">
                 <div class="card-img">
-                    <!-- 替换成你的图片地址，建议尺寸：300x200 -->
-                    <img src="main3.jpg" >
+                    <img src="main3.jpg">
                 </div>
                 <div class="card-content">
-                    <div class="card-title">科普资源</div>
-                    <div class="card-desc">获取有趣又严谨的科普资源</div>
+                    <div class="card-title">Popular Science</div>
+                    <div class="card-desc">Discover fun and reliable science resources</div>
                 </div>
             </a>
-            <!-- 卡片4：科学社区 -->
+
             <a href="sci-com/sci-com.html" class="card-item">
                 <div class="card-img">
-                    <!-- 替换成你的图片地址，建议尺寸：300x200 -->
                     <img src="main4.jpg">
                 </div>
                 <div class="card-content">
-                    <div class="card-title">探星阁社区</div>
-                    <div class="card-desc">搭建学习成长的交流平台</div>
+                    <div class="card-title">Science Community</div>
+                    <div class="card-desc">Join our learning and growth platform</div>
                 </div>
             </a>
-            <!-- 卡片：联系我们 -->
+
             <a href="contact-us.html" class="card-item">
                 <div class="card-img">
-                    <!-- 替换成你的图片地址，建议尺寸：300x200 -->
-                    <img src="https://picsum.photos/seed/contact/600/400" alt="联系我们 - 天文物理交流">
+                    <img src="https://picsum.photos/seed/contact/600/400" alt="Contact Us">
                 </div>
                 <div class="card-content">
-                    <div class="card-title">联系我们</div>
-                    <div class="card-desc">官方邮箱、微信公众号</div>
+                    <div class="card-title">Contact Us</div>
+                    <div class="card-desc">Official email & WeChat official account</div>
                 </div>
             </a>
         </div>
-                        <!-- 页脚 -->
-        <footer class="footer">
-            <p>© 2026 探星阁</p>
+
+        <footer class="footer" style="text-align:center; margin-top:40px; color:#94a3b8;">
+            <p>© 2026 TanXG</p>
         </footer>
     </div>
 
-    <!-- 访问量统计 -->
     <div style="text-align:center; color:#60a5fa; padding:20px 0; font-size:14px;">
-    总访问量：<span id="visit-count">0</span>
+        Total Visits: <span id="visit-count">0</span>
     </div>
 
     <script>
-    // 极简无后端访问统计（本地存储+会话判断）  
-    (() => {
-    // 本地存储key
-    const key = 'site_total_visit';
-    // 本次会话标记，防止刷新重复计数
-    const sessionKey = 'site_has_visited';
-
-    // 读取历史访问量
-    let count = Number(localStorage.getItem(key)) || 0;
-
-    // 仅当前会话第一次打开才+1
-    if(!sessionStorage.getItem(sessionKey)){
-        count++;
-        localStorage.setItem(key, count);
-        sessionStorage.setItem(sessionKey, '1');
-    }
-
-    // 渲染数字
-    document.getElementById('visit-count').innerText = count;
-    })();
-    </script>    
+        (() => {
+            const key = 'site_total_visit';
+            const sessionKey = 'site_has_visited';
+            let count = Number(localStorage.getItem(key)) || 0;
+            if(!sessionStorage.getItem(sessionKey)){
+                count++;
+                localStorage.setItem(key, count);
+                sessionStorage.setItem(sessionKey, '1');
+            }
+            document.getElementById('visit-count').innerText = count;
+        })();
+    </script>
 </body>
-
 </html>
