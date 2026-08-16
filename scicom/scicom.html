@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>科学社区</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="icon" href="../logo.jpg" type="image/jpeg">
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+
+		<style>
+			.content-section {
+				margin-top: 3rem;
+			}
+
+			.content-section h2 {
+				margin-bottom: 1.5rem;
+			}
+
+			.sub-card-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fill, 240px);
+				justify-content: center;
+				gap: 1.5rem;
+				margin-top: 1.5rem;
+			}
+
+			.sub-card {
+				width: 240px;
+				height: 260px;
+				border: 1px solid #eeeeee;
+				padding: 1rem;
+				text-align: center;
+				cursor: pointer;
+				transition: 0.3s ease;
+				background: #ffffff;
+
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.sub-card:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+			}
+
+			.sub-card img {
+				width: 190px;
+				height: 130px;
+				object-fit: cover;
+				margin-bottom: 1rem;
+			}
+
+			.sub-card h3 {
+				margin: 0;
+				font-size: 1rem;
+				line-height: 1.4;
+			}
+		</style>
+	</head>
+
+	<body class="is-preload">
+
+		<div id="wrapper">
+			<header id="header"></header>
+
+			<nav id="nav">
+				<ul class="links">
+					<li><a href="../index.html">首页</a></li>
+					<li><a href="../lecture notes/lecture notes.html">讲义</a></li>
+					<li><a href="../research/research.html">科学研究</a></li>
+					<li><a href="../popsci/popsci.html">科普</a></li>
+					<li class="active"><a>科学社区</a></li>
+				</ul>
+			</nav>
+			<div id="main">
+
+				<section class="post">
+
+					<header class="major">
+						<span class="date">2026 年 5 月 1 日</span>
+						<h1>科学社区</h1>
+						</p>
+					</header>
+
+					<section class="content-section">
+						<h2>科研伙伴</h2>
+
+						<div class="sub-card-grid">
+							<div class="sub-card" onclick="openPdf('../scicom/手把手教你养龙虾，openclaw纯干货操作指南（一）.pdf')">
+								<img src="../scicom/openclaw.png">
+								<h3>手把手教你养龙虾|openclaw纯干货操作指南（一）</h3>
+							</div>
+						</div>
+					</section>
+
+					<section class="content-section">
+						<h2>成长故事</h2>
+
+						<div class="sub-card-grid">
+							<div class="sub-card" onclick="openPdf('../scicom/谨以此文致敬我的高中时代（郭君）.pdf')">
+								<img src="../scicom/郭君.png">
+								<h3>谨以此文致敬我的高中时代（郭君）</h3>
+							</div>
+						</div>
+					</section>
+
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="../assets/js/jquery.min.js"></script>
+		<script src="../assets/js/jquery.scrollex.min.js"></script>
+		<script src="../assets/js/jquery.scrolly.min.js"></script>
+		<script src="../assets/js/browser.min.js"></script>
+		<script src="../assets/js/breakpoints.min.js"></script>
+		<script src="../assets/js/util.js"></script>
+		<script src="../assets/js/main.js"></script>
+
+		<script>
+			function openPdf(pdfUrl) {
+				window.open(pdfUrl, '_self');
+			}
+		</script>
+
+	</body>
+</html>

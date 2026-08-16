@@ -1,0 +1,232 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>讲义</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="icon" href="../logo.jpg" type="image/jpeg">
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<style>
+			.note-section {
+				margin-top: 3rem;
+			}
+
+			.note-section h2 {
+				margin-bottom: 1rem;
+			}
+
+			.main-card {
+				border: 1px solid #eeeeee;
+				padding: 1.5rem;
+				margin: 2rem 0 1rem 0;
+				text-align: center;
+				cursor: pointer;
+				transition: 0.3s ease;
+				position: relative;
+			}
+
+			.main-card:hover {
+				background: #f7f7f7;
+			}
+
+			.main-card::after {
+				content: "▼";
+				position: absolute;
+				right: 1.5rem;
+				top: 50%;
+				transform: translateY(-50%);
+				transition: 0.3s ease;
+			}
+
+			.main-card.expanded::after {
+				transform: translateY(-50%) rotate(180deg);
+			}
+
+			.sub-card-grid {
+				display: none;
+				grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+				gap: 1.5rem;
+				margin-bottom: 2rem;
+			}
+
+			.sub-card-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, 240px);
+			justify-content: center;
+			gap: 1.5rem;
+			margin-top: 1.5rem;
+			margin-bottom: 0;
+
+			max-height: 0;
+			opacity: 0;
+			transform: translateY(-10px);
+			overflow: hidden;
+			pointer-events: none;
+
+			transition:
+				max-height 0.6s ease,
+				opacity 0.4s ease,
+				transform 0.4s ease,
+				margin-bottom 0.4s ease;
+			}
+
+			.sub-card-grid.show {
+				max-height: 800px;
+				opacity: 1;
+				transform: translateY(0);
+				margin-bottom: 2rem;
+				pointer-events: auto;
+			}
+
+			.sub-card {
+				width: 240px;
+				height: 260px;
+				border: 1px solid #eeeeee;
+				padding: 1rem;
+				text-align: center;
+				cursor: pointer;
+				transition: 0.3s ease;
+				background: #ffffff;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.sub-card:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+			}
+
+			.sub-card img {
+				width: 190px;
+				height: 130px;
+				object-fit: cover;
+				margin-bottom: 1rem;
+			}
+
+			.sub-card h3 {
+				margin: 0;
+				font-size: 1rem;
+				line-height: 1.4;
+			}
+		</style>
+	</head>
+
+	<body class="is-preload">
+
+		<div id="wrapper">
+
+			<header id="header">
+			</header>
+
+			<nav id="nav">
+				<ul class="links">
+					<li><a href="../index.html">首页</a></li>
+					<li class="active"><a>讲义</a></li>
+					<li><a href="../research/research.html">科学研究</a></li>
+					<li><a href="../popsci/popsci.html">科普</a></li>
+					<li><a href="../scicom/scicom.html">科学社区</a></li>
+				</ul>
+			</nav>
+
+			<div id="main">
+
+				<section class="post">
+					<header class="major">
+						<span class="date">2026 年 5 月 1 日</span>
+						<h1>讲义</h1>
+					</header>
+
+					<section class="note-section">
+						<h2>下载说明</h2>
+						<p>
+							1. 探星阁所有讲义均免费下载；转载时请注明出处，严禁私自用于商业用途。
+						</p>
+						<p>
+							2. 点击相应卡片进入详情页，可查看讲义介绍并获取 PDF 下载门户。
+						</p>
+						<p>
+							3. 讲义随时更新，请及时留意；如下载链接失效，请通过电子邮件或官方微信公众号反馈。
+						</p>
+					</section>
+
+					<section class="note-section">
+						<div class="main-card" onclick="toggleSubCards(this, 'group1')">
+							<h2>物理学</h2>
+						</div>
+
+						<div class="sub-card-grid" data-group="group1">
+							<div class="sub-card" onclick="window.location.href='../lecture notes/mechanics/mechanics.html'">
+								<img src="../lecture notes/mechanics/mcover.jpg" alt="力学">
+								<h3>力学</h3>
+							</div>
+
+							<div class="sub-card" onclick="window.location.href='../lecture notes/electromagnetism/electromagnetism.html'">
+								<img src="../lecture notes/electromagnetism/emcover.jpg" alt="电磁学">
+								<h3>电磁学</h3>
+							</div>
+
+							<div class="sub-card" onclick="window.location.href='../lecture notes/general relativity/general relativity.html'">
+								<img src="../lecture notes/general relativity/grcover.png" alt="广义相对论">
+								<h3>广义相对论</h3>
+							</div>
+						</div>
+					</section>
+
+					<section class="note-section">
+						<div class="main-card" onclick="toggleSubCards(this, 'group2')">
+							<h2>天文学</h2>
+						</div>
+
+						<div class="sub-card-grid" data-group="group2">
+							<!-- Add astronomy and astrophysics lecture notes here -->
+						</div>
+					</section>
+
+				</section>
+
+			</div>
+
+			<div id="copyright">
+				<ul>
+					<li>&copy; 2026 TanXG</li>
+					<li>设计：<a href="https://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</div>
+
+		</div>
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+		<script>
+			function toggleSubCards(cardElement, groupKey) {
+				const subGrid = document.querySelector(`.sub-card-grid[data-group="${groupKey}"]`);
+				const isExpanded = subGrid.classList.toggle('show');
+				cardElement.classList.toggle('expanded');
+				localStorage.setItem(`card_expanded_${groupKey}`, isExpanded);
+			}
+
+			window.addEventListener('DOMContentLoaded', function() {
+				document.querySelectorAll('.main-card').forEach(function(card) {
+					const groupKey = card.getAttribute('onclick').match(/'([^']+)'/)[1];
+					const subGrid = document.querySelector(`.sub-card-grid[data-group="${groupKey}"]`);
+
+					if (localStorage.getItem(`card_expanded_${groupKey}`) === 'true' && subGrid) {
+						card.classList.add('expanded');
+						subGrid.classList.add('show');
+					}
+				});
+			});
+		</script>
+
+	</body>
+</html>

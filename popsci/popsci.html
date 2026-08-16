@@ -1,0 +1,174 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>科普</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="icon" href="../logo.jpg" type="image/jpeg">
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<style>
+			.content-section {
+				margin-top: 3rem;
+			}
+
+			.content-section h2 {
+				margin-bottom: 1.5rem;
+			}
+
+			/* ✅ 关键：固定卡片布局 */
+			.sub-card-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fill, 240px);
+				justify-content: center;
+				gap: 1.5rem;
+				margin-top: 1.5rem;
+			}
+
+			/* ✅ 关键：锁死卡片尺寸 */
+			.sub-card {
+				width: 240px;
+				height: 260px;
+				border: 1px solid #eeeeee;
+				padding: 1rem;
+				text-align: center;
+				cursor: pointer;
+				transition: 0.3s ease;
+				background: #ffffff;
+
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.sub-card:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+			}
+
+			.sub-card img {
+				width: 190px;
+				height: 130px;
+				object-fit: cover;
+				margin-bottom: 1rem;
+			}
+
+			.sub-card h3 {
+				margin: 0;
+				font-size: 1rem;
+				line-height: 1.4;
+			}
+		</style>
+	</head>
+
+	<body class="is-preload">
+
+		<div id="wrapper">
+
+			<header id="header">
+			</header>
+
+			<nav id="nav">
+				<ul class="links">
+					<li><a href="../index.html">首页</a></li>
+					<li><a href="../lecture notes/lecture notes.html">讲义</a></li>
+					<li><a href="../research/research.html">科学研究</a></li>
+					<li class="active"><a>科普</a></li>
+					<li><a href="../scicom/scicom.html">科学社区</a></li>
+				</ul>
+			</nav>
+
+			<div id="main">
+
+				<section class="post">
+					<header class="major">
+						<span class="date">2026 年 8 月 16 日</span>
+						<h1>科普</h1>
+						</p>
+					</header>
+
+					<section class="content-section">
+						<p>
+							1. 探星阁所有科普资源均可免费分享；转载时请注明出处，未经授权不得用于商业用途。
+						</p>
+						<p>
+							2. 点击相应卡片即可直接打开 PDF，支持在线查看与下载。
+						</p>
+						<p>
+							3. 如资源链接失效，请及时通过电子邮件或官方微信公众号反馈。
+						</p>
+					</section>
+
+					<section class="content-section">
+						<h2>天文学</h2>
+
+						<div class="sub-card-grid">
+							<div class="sub-card" onclick="openPdf('../popsci/太阳系一日游.pdf')">
+								<img src="../popsci/太阳系一日游.png" alt="太阳系一日游">
+								<h3>太阳系一日游</h3>
+							</div>
+
+							<div class="sub-card" onclick="openPdf('../popsci/八大行星名称的由来.pdf')">
+								<img src="../popsci/八大行星名称的由来.png" alt="八大行星名称的由来">
+								<h3>八大行星名称的由来</h3>
+							</div>
+
+							<div class="sub-card" onclick="openPdf('../popsci/宇宙有多大.pdf')">
+								<img src="../popsci/宇宙有多大.png" alt="宇宙有多大？">
+								<h3>宇宙有多大？</h3>
+							</div>
+
+							<div class="sub-card" onclick="openPdf('../popsci/中国古代天文学略谈.pdf')">
+								<img src="../popsci/中国古代天文学略谈.png" alt="中国古代天文学略谈">
+								<h3>中国古代天文学略谈</h3>
+							</div>
+
+							<div class="sub-card" onclick="openPdf('../popsci/宇宙动物园奇妙夜.pdf')">
+								<img src="../popsci/宇宙动物园奇妙夜.png" alt="宇宙动物园奇妙夜">
+								<h3>宇宙动物园奇妙夜</h3>
+							</div>
+						</div>
+					</section>
+
+					<section class="content-section">
+						<h2>生活中的物理</h2>
+
+						<div class="sub-card-grid">
+							<div class="sub-card" onclick="openPdf('../popsci/音色背后的奥秘.pdf')">
+								<img src="../popsci/音色背后的奥秘.png" alt="音色背后的奥秘">
+								<h3>“音色”背后的奥秘</h3>
+							</div>
+						</div>
+					</section>
+
+				</section>
+
+			</div>
+
+			<div id="copyright">
+				<ul>
+					<li>&copy; 2026 TanXG</li>
+					<li>设计：<a href="https://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</div>
+
+		</div>
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+		<script>
+			function openPdf(pdfUrl) {
+				window.open(pdfUrl, '_self');
+			}
+		</script>
+
+	</body>
+</html>
